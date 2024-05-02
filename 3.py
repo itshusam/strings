@@ -20,3 +20,7 @@ def process_command(user_input):
             elif command == "contact support":
                 print("You can contact our support team at our number")
             return
+
+user_problem=input("can you tell us why you are  calling?")
+
+process_command(user_problem)
