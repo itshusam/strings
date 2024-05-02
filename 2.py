@@ -39,3 +39,10 @@ def validate_email(email):
     else:
         print("Error: Email address is not in the right format.")
         return False
+
+
+password=input("please enter a new password!")
+check(password)
+
+email=input("enter your email!")
+validate_email(email)
