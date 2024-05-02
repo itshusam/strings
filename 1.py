@@ -13,7 +13,7 @@ for review in reviews:
     for keyword in keywords:
         modified_review = modified_review.replace(keyword, keyword.upper())
     print(modified_review)
-    
+
 positive_words = ["good", "excellent", "great", "awesome", "fantastic", "superb", "amazing"]
 negative_words = ["bad", "poor", "terrible", "horrible", "awful", "disappointing", "subpar"]
 
@@ -28,7 +28,12 @@ def create_summary(review):
         return review
     else:
         summary = review[:30]
-        last_space_index = summary.rfind(' ')
+        last_space_index = summary.rfind(" ")
         if last_space_index != -1:
-            summary = summary[:last_space_index]
-        return summary + "…"
+            summary = summary[:last_space_index] + "..."
+        return summary
+
+
+for review in reviews:
+    summary = create_summary(review)
+    print(f"Summary: {summary}")
